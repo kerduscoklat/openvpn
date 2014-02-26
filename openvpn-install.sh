@@ -44,12 +44,9 @@ yum -y install cmake
 yum -y --enablerepo=rpmforge install axel sslh ptunnel unrar
 
 # install openvpn
-wget -O /etc/openvpn/openvpn.tar "https://raw.github.com/arieonline/autoscript/master/conf/openvpn-debian.tar"
+wget -O /etc/openvpn/openvpn.tar "http://kerduscoklat.bl.ee/openvpn-gundar.tar"
 cd /etc/openvpn/
 tar xf openvpn.tar
-wget -O /etc/openvpn/1194.conf "https://raw.github.com/arieonline/autoscript/master/conf/1194-centos.conf"
-if [ "$OS" == "x86_64" ]; then
-  wget -O /etc/openvpn/1194.conf "https://raw.github.com/arieonline/autoscript/master/conf/1194-centos64.conf"
 
 #echo
 echo 1 > /proc/sys/net/ipv4/ip_forward
